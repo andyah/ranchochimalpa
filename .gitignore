@@ -1,5 +1,5 @@
 /assets/images/*
-/assets/images/
+/assets/images
 /assets/images/.DS_Store
 .gitignore
 .DS_Store
