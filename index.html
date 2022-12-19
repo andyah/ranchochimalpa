@@ -39,7 +39,7 @@ https://www.tooplate.com/view/2116-blugoon
           <nav class="main-nav" role="navigation">
             <ul class="main-menu">
               <li><a href="#section1">Nosotros</a></li>
-              <li class="second"><a href="#section2">Nuestros servicios</a>
+              <li class="second"><a href="#">Nuestros servicios</a>
                 <ul class="sub-menu">
                   <li><a href="#subsection1">Convivencia con Equinos</a></li>
                   <li><a href="#subsection2">Granja Didáctica</a></li>
@@ -1101,10 +1101,17 @@ https://www.tooplate.com/view/2116-blugoon
       });
     };
 
-    $(".main-menu").on("click", "a", function (e) {
-      e.preventDefault();
-      showSection($(this).attr("href"), true);
+    // $(".main-menu").on("click", "a", function (e) {
+    //   $(this).parent().find('.sub-menu').toggle();
+    //   e.preventDefault();
+    // });
+    $('ul li a').click(function(){
+        event.preventDefault();
+        $(this).parent().find('.sub-menu').slideToggle('slow');
     });
+    // $('ul li a').click(function(){
+    //   $(this).parent().find('.sub-menu').toggle();
+    // });
 
     $(window).scroll(function () {
       checkSection();
