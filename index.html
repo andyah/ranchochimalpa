@@ -41,19 +41,19 @@ https://www.tooplate.com/view/2116-blugoon
               <li><a href="#section1">Nosotros</a></li>
               <li class="second"><a href="#">Nuestros servicios</a>
                 <ul class="sub-menu">
-                  <li><a href="#subsection1">Convivencia con Equinos</a></li>
-                  <li><a href="#subsection2">Granja Didáctica</a></li>
+                  <li><a href="#subsection4">Convivencia con Equinos</a></li>
+                  <li><a href="#subsection5">Granja Didáctica</a></li>
                   <!-- <li><a href="#subsection3">Turismo Ecuestre</a></li> -->
-                  <li><a href="#subsection4">Alojamiento de Equinos</a></li>
-                  <li><a href="#subsection5">Organización de Eventos</a></li>
-                  <li><a href="#subsection6">Talleres de Coaching</a></li>
-                  <li><a href="#subsection7">Área de Campamento</a></li>
-                  <li><a href="#subsection8">Venta de Equinos</a></li>
-                  <li><a href="#subsection9">Venta de Borregos y Conejos</a></li>
+                  <li><a href="#subsection6">Alojamiento de Equinos</a></li>
+                  <li><a href="#subsection7">Organización de Eventos</a></li>
+                  <li><a href="#subsection8">Talleres de Coaching</a></li>
+                  <li><a href="#subsection9">Área de Campamento</a></li>
+                  <li><a href="#subsection10">Venta de Equinos</a></li>
+                  <li><a href="#subsection11">Venta de Borregos y Conejos</a></li>
                 </ul>
               </li>
-              <li><a href="#section3">Galeria</a></li>
-              <li><a href="#section4">Como llegar</a></li>
+              <li><a href="#section2">Galeria</a></li>
+              <li><a href="#section3">Como llegar</a></li>
             </ul>
           </nav>
           <div class="social-network">
@@ -165,7 +165,7 @@ https://www.tooplate.com/view/2116-blugoon
       </div>
     </section>
 
-    <section class="section my-services" data-section="subsection1">
+    <section class="section my-services" data-section="subsection4">
       <div class="container">
         <div class="section-heading">
           <h2>Convivencia con Equinos</h2>
@@ -222,7 +222,7 @@ https://www.tooplate.com/view/2116-blugoon
       </div>
     </section>
 
-    <section class="section about-me" data-section="subsection2">
+    <section class="section about-me" data-section="subsection5">
       <div class="container">
         <div class="section-heading">
           <h2>Granja Didáctica</h2>
@@ -316,7 +316,7 @@ https://www.tooplate.com/view/2116-blugoon
       </div>
     </section> -->
 
-    <section class="section about-me" data-section="subsection4">
+    <section class="section about-me" data-section="subsection6">
       <div class="container">
         <div class="section-heading">
           <h2>Alojamiento de Equinos</h2>
@@ -356,7 +356,7 @@ https://www.tooplate.com/view/2116-blugoon
         </div>
       </div>
     </section>
-    <section class="section about-me" data-section="subsection5">
+    <section class="section about-me" data-section="subsection7">
       <div class="container">
         <div class="section-heading">
           <h2>Organización de Eventos</h2>
@@ -413,7 +413,7 @@ https://www.tooplate.com/view/2116-blugoon
         </div>
       </div>
     </section>
-    <section class="section about-me" data-section="subsection6">
+    <section class="section about-me" data-section="subsection8">
       <div class="container">
         <div class="section-heading">
           <h2>Talleres de Coaching</h2>
@@ -461,7 +461,7 @@ https://www.tooplate.com/view/2116-blugoon
         </div>
       </div>
     </section>
-    <section class="section about-me" data-section="subsection7">
+    <section class="section about-me" data-section="subsection9">
       <div class="container">
         <div class="section-heading">
           <h2>Área de Campamento</h2>
@@ -500,7 +500,7 @@ https://www.tooplate.com/view/2116-blugoon
         </div>
       </div>
     </section>
-    <section class="section about-me" data-section="subsection8">
+    <section class="section about-me" data-section="subsection10">
       <div class="container">
         <div class="section-heading">
           <h2>Venta de Equinos</h2>
@@ -643,7 +643,7 @@ https://www.tooplate.com/view/2116-blugoon
         </div>
       </div>
     </section>
-    <section class="section about-me" data-section="subsection9">
+    <section class="section about-me" data-section="subsection11">
       <div class="container">
         <div class="section-heading">
           <h2>Venta de Borregos y Conejos</h2>
@@ -825,7 +825,7 @@ https://www.tooplate.com/view/2116-blugoon
       </div>
     </section>
     <!-- END SUBSECTIONS -->
-    <section class="section my-work" data-section="section3">
+    <section class="section my-work" data-section="section2">
       <div class="container">
         <div class="section-heading">
           <h2>Galeria</h2>
@@ -1350,7 +1350,7 @@ https://www.tooplate.com/view/2116-blugoon
       </div>
     </section>
 
-    <section class="section contact-me" data-section="section4">
+    <section class="section contact-me" data-section="section3">
       <div class="container">
         <div class="section-heading">
           <h2>Dirección</h2>
@@ -1429,6 +1429,11 @@ https://www.tooplate.com/view/2116-blugoon
         }
       });
     };
+
+    $(".main-menu").on("click", "a", function (e) {
+      e.preventDefault();
+      showSection($(this).attr("href"), true);
+    });
 
     // $(".main-menu").on("click", "a", function (e) {
     //   $(this).parent().find('.sub-menu').toggle();
