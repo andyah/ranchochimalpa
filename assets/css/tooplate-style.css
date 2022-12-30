@@ -137,6 +137,9 @@ html {
     color: #215D18;
 }
 
+.main-nav li:hover a {
+    overflow: hidden;
+}
 .main-nav li ul li a {
     display: block;
     background: #215D18 !important;

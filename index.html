@@ -39,7 +39,7 @@ https://www.tooplate.com/view/2116-blugoon
           <nav class="main-nav" role="navigation">
             <ul class="main-menu">
               <li><a href="#section1">Nosotros</a></li>
-              <li class="second"><a href="#">Nuestros servicios</a>
+              <li class="second"><a href>Nuestros servicios</a>
                 <ul class="sub-menu">
                   <li><a href="#subsection4">Convivencia con Equinos</a></li>
                   <li><a href="#subsection5">Granja Didáctica</a></li>
@@ -179,43 +179,43 @@ https://www.tooplate.com/view/2116-blugoon
           <div class="col-md-6">
             <div class="service-item">
               <img src="assets/images/convivenciaEquinos/convivencia1.png" alt="">
-              <h4>Ejemplo 1.</h4>
-              <p>Descripción 1.</p>
+              <h4>Convivencia con animales</h4>
+              <p>La convivencia con animalitos de granja permite desarrollar grandes habilidades.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="service-item">
               <img src="assets/images/convivenciaEquinos/convivencia2.png" alt="">
-              <h4>Ejemplo 2.</h4>
-              <p>Descripción 2.</p>
+              <h4>Nuestro equipo</h4>
+              <p>El equipo de Rancho Chimalpa te acompañará a convivir con nuestros hermosos equinos.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="service-item">
               <img src="assets/images/convivenciaEquinos/convivencia3.png" alt="">
-              <h4>Ejemplo 3.</h4>
-              <p>Descripción 3.</p>
+              <h4>Confianza</h4>
+              <p>Brindarte tranquilidad, seguridad y confianza es parte fundamental de nuestros servicios.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="service-item">
               <img src="assets/images/convivenciaEquinos/convivencia4.png" alt="">
-              <h4>Ejemplo 4.</h4>
-              <p>Descripción 4.</p>
+              <h4>Seguridad</h4>
+              <p>Ganarás  confianza y seguridad.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="service-item">
               <img src="assets/images/convivenciaEquinos/convivencia5.png" alt="">
-              <h4>Ejemplo 4.</h4>
-              <p>Descripción 4.</p>
+              <h4>Equilibrio emocional</h4>
+              <p>Nuestros equinos tienen un gran equilibrio emocional lo que los hace muy nobles.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="service-item">
               <img src="assets/images/convivenciaEquinos/convivencia6.png" alt="">
-              <h4>Ejemplo 4.</h4>
-              <p>Descripción 4.</p>
+              <h4>Experiencias</h4>
+              <p>Ven a vivir la experiencia y date la gran oportunidad de convivir con cada uno de nuestros amigos equinos.  </p>
             </div>
           </div>
         </div>
@@ -471,30 +471,30 @@ https://www.tooplate.com/view/2116-blugoon
         <div class="row">
           <div class="col-md-6">
             <div class="service-item">
-              <i class="fa fa-area-chart"></i>
-              <h4>Ejemplo 1.</h4>
-              <p>Descripción 1.</p>
+              <img src="/assets/images/campamento/imagen 1.png" alt="">
+              <h4>Instalaciones</h4>
+              <p>En nuestras instalaciones vivirás momentos mágicos al acampar con tus amigos.</p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="service-item">
-              <i class="fa fa-check-square-o"></i>
-              <h4>Ejemplo 2.</h4>
-              <p>Descripción 2.</p>
+              <img src="/assets/images/campamento/imagen 2.png" alt="">
+              <h4>Veladas</h4>
+              <p>Veladas encantadoras a lado de una caliente fogata, podrán ser parte de tus más memorables recuerdos. </p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="service-item">
-              <i class="fa fa-question-circle"></i>
-              <h4>Ejemplo 3.</h4>
-              <p>Descripción 3.</p>
+              <img src="/assets/images/campamento/imagen 3.png" alt="">
+              <h4>Noches en tranquilidad</h4>
+              <p>Tranquilidad y seguridad reinarán en tus noches de campamento.  </p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="service-item">
-              <i class="fa fa-support"></i>
-              <h4>Ejemplo 4.</h4>
-              <p>Descripción 4.</p>
+              <img src="/assets/images/campamento/imagen 4.png" alt="">
+              <h4>Experiencias increibles</h4>
+              <p>Es momento de abandonar la rutina diaria y darte una escapada a nuestras zonas de campamento. </p>
             </div>
           </div>
         </div>
@@ -1435,17 +1435,21 @@ https://www.tooplate.com/view/2116-blugoon
       showSection($(this).attr("href"), true);
     });
 
-    // $(".main-menu").on("click", "a", function (e) {
+    // $("ul li a").on("click", "a", function (e) {
     //   $(this).parent().find('.sub-menu').toggle();
     //   e.preventDefault();
     // });
-    $('ul li a').click(function(){
-        event.preventDefault();
-        $(this).parent().find('.sub-menu').slideToggle('slow');
-    });
-    // $('ul li a').click(function(){
-    //   $(this).parent().find('.sub-menu').toggle();
-    // });
+
+    $('.main-menu').offset().top;
+
+    $('.main-menu').on('click', function (e){
+        if($(this).toggleClass("active")){
+          $('.open').not($('.main-menu')).removeClass("open");
+        } else {
+          $(this).parent().find('.sub-menu').slideToggle('slow');
+          e.preventDefault();
+        }
+      });
 
     $(window).scroll(function () {
       checkSection();
